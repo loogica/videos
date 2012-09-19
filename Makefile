@@ -74,6 +74,7 @@ github: publish
 	git push origin gh-pages
 
 refresh:
+	mkdir -p output
 	pelican-themes -r svbtle
 	pelican-themes --install svbtle/
 	$(PELICAN) -v -d -s pelicanconf.py $(INPUTDIR)
