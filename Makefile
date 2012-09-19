@@ -75,7 +75,7 @@ github: publish
 
 refresh:
 	pelican-themes -r svbtle
-	pelican-themes --install /Users/felipecruz/Projects/pelican-themes/svbtle
+	pelican-themes --install svbtle/
 	$(PELICAN) -v -d -s pelicanconf.py $(INPUTDIR)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github

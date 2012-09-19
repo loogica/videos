@@ -1,0 +1,6 @@
+[submodule "loogica-svbtle"]
+	path = loogica-svbtle
+	url = https://github.com/loogica/pelican-svbtle.git
+[submodule "svbtle"]
+	path = svbtle
+	url = https://github.com/loogica/pelican-svbtle.git
