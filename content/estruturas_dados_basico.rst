@@ -12,17 +12,14 @@ Pra onde vamos?
 ---------------
 
 Se já sabemos manipular, mesmo que de forma simples, números, strings e sabemos
-como executar programas python pela linha de comando, já podemos aprender
+como executar programas Python pela linha de comando, já podemos aprender
 coisas que serão muito mais comuns na prática.
 
 Normalmente, os cursos seguem uma linha onde o próximo passo seria continuar
 com a parte de fluxo de controle (if, else), loops e depois pra funções.
 
-Esses conceitos são extremamentes importantes mas com o conhecimento que foi
-ensinado eu poderia apenas ensinar coisas "\simplórias"
-
-Antes desses temas, quero chamar muita atenção pra 3 objetos muito importantes
-e extremamente comuns em Python e ensinar um pouco sobre eles.
+Aqui, nós vamos aprender um pouco sobre as estururas de dados embutidas
+na linguagem Python:
 
 * Listas (list)
 * Dicionários (dict)
@@ -32,20 +29,28 @@ Uma das chaves pra produtividade de Python e outras linguagens é o suporte
 'builtin' (embutido) dessas estruturas de dados. Não é necessário importar
 nada, nem declarar Classe alguma pra usa-las.
 
-
-
 Listas
 ``````
 
-Em geral, usamos listas pra representar coleções onde queremos acessar
-os elementos por índice e que o seu tamanho seja flexível. Listas são
-mutáveis em Python. Ou seja, podemos mudar os valores das posições.
+Listas são estruturas de dados com tamanho flexível, que em geral, usamos 
+representar coleções de objetos. Normalmente queremos acessar os elementos 
+por índice ou executar um loop para acessar cada elemento de uma lista 
+para realizar uma tarefa.
+
+Em Python, Listas são mutáveis, ou seja, podemos mudar os valores dos
+elementos, adicionar ou remover.
+
+A forma de acessar elementos de uma lista, pelo seu índice é usando a 
+notação ``[]`` sempre lembrando que oprimeiro índice de uma lista em
+Python é 0.
 
 Como sempre, o primero exemplo é um código.
 
 .. code-block:: python
 
     lista = []
+    outra_lista = ['a', 'b', 'c']
+    assert 'b' == outra_lista[1]
 
 Essa é a construção mais comum de uma lista. 
 Em Python as listas são representadas por colchetes ``[]``
@@ -73,20 +78,20 @@ operações e as outras ficam pra aula só de listas.
     # inserir em uma posição
     lista = [1, 2, 3]
     lista.insert(1, 4)
-    lista == [1, 4, 2, 3]
+    assert lista == [1, 4, 2, 3]
 
     # retirar um elemento
     lista = [1, 2, 3]
     lista.remove(2)
     lista == [1, 3]
 
-    # remover um elemento de uma posição
-    # que se não for especificada remove do final
-
+    # pegar o último elemento, removendo-o da lista
     lista = [1, 2, 3, 4, 5]
     lista.pop() # remove do final e retorna 5
     lista == [1, 2, 3, 4]
 
+    # Se você especificar o índice do elemento, 
+    # faz o mesmo com ele ao invés do último
     lista.pop(0) #remove do inicio e retorna 1
     lista == [2, 3, 4]
 
@@ -114,15 +119,22 @@ A semântica:
 É muito comum pensar em listas apenas como isso, mas em muitos casos, elas
 são usadas com uma semântica associada as posições.
 
-A função ``datetime.now()`` retorna uma tupla onde cada posição
-contem um dos valores que compões o obejeto ``datetime``
-
 .. code-block:: python
 
     tupla = (1,2)
 
     # (nome, identidade, email)
     dados_pessoa = ('Nome da Pessoa', 23435, 'email@email.com')
+
+    # Tuplas são imutáveis. Por isso não é possível alterar os elementos
+    dados_pessoa[0] = 'Fulano'
+    TypeError: 'tuple' object does not support item assignment
+
+
+A função ``datetime.now()`` retorna uma tupla onde cada posição
+contem um dos valores que compões o obejeto ``datetime``
+
+.. code-block:: python
 
     from datetime import datetime
     datetime.now()
@@ -132,7 +144,7 @@ contem um dos valores que compões o obejeto ``datetime``
 Dicionários
 ```````````
 
-Dicionários (dict) são estruturas de aceso por uma chave e não por um índice.
+Dicionários (dict) são estruturas de acesso por uma chave e não por um índice.
 Chave pode ser qualquer objeto imutável, inclusive uma tupla. Números e strings
 são imutáveis e são muito comumente usados como chaves de dicionários.
 
@@ -144,13 +156,12 @@ Exemplos:
 
 .. code-block:: python
 
-    dicionario = {}
-    # ou dicionario = dict()
+    dicionario = {'chave': 'valor'}
 
     dicionario[1] = 1
     dicionario['a'] = 'b'
 
-    dicionario == {'a': 'b', 1: 1}
+    dicionario == {'chave': 'valor', 'a': 'b', 1: 1}
 
 Uma outra forma de criar dicionários, com a função ``dict()``:
 
@@ -159,16 +170,16 @@ Uma outra forma de criar dicionários, com a função ``dict()``:
     dicionario = dict(nome='Pessoa', idade=25)
     dicionario == {'idade': 25, 'nome': 'Pessoa'}
 
-Outras facilidades com dicionários, são:
+Dicionários têm ainda outras facilidades. Seguem alguns exemplos.
 
 Testar se uma chave existe no dicionário:
 
 .. code-block:: python
 
     dicionario = dict(nome='Pessoa', idade=25)
-    assert 'nome' in dicionario == True
+    assert 'nome' in dicionario
 
-Remover uma par chave-valor de um dicionário:
+Remover um par chave-valor de um dicionário:
 
 .. code-block:: python
 
@@ -188,6 +199,7 @@ valores de um dicionário, podemos fazer como exibido abaixo:
     ['idade']
     >>> dicionario.values()
     [25]
+
 
 Documentação Oficial sobre as Estruturas de Dados
 `````````````````````````````````````````````````
