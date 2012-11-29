@@ -9,11 +9,13 @@ def send_data():
     put('blog_static.zip', '/tmp')
 
 def remote_deploy_zip():
-    sudo('mv /tmp/blog_static.zip /opt/apps/blog')
-    with cd('/opt/apps/blog'):
-        sudo('rm -rf old_output/')
-        sudo('mv output old_output')
+    with cd('/tmp'):
         sudo('unzip blog_static.zip')
+        sudo('mv output/ /opt/apps/')
+    with cd('/opt/apps'):
+        sudo('rm -rf videos')
+        sudo('mv output videos')
+        sudo('chown -R deploy:www-data videos')
 
 def deploy():
     zip_output()
