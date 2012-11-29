@@ -75,8 +75,8 @@ github: publish
 
 refresh:
 	mkdir -p output
-	pelican-themes -r svbtle
-	pelican-themes --install svbtle/
+	pelican-themes -r loogica_template
+	pelican-themes --install loogica_template/
 	$(PELICAN) -v -d -s pelicanconf.py $(INPUTDIR)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github

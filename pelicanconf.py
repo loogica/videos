@@ -5,7 +5,7 @@ AUTHOR = u"Felipe"
 SITENAME = u"loogica blog"
 SITEURL = 'http://loogica.net/blog'
 
-STATIC_URL = "http://loogica.net/blog/"
+STATIC_URL = ""
 
 TIMEZONE = 'America/Sao_Paulo'
 
@@ -35,9 +35,10 @@ DEFAULT_DATE_FORMAT = ('%d/%m/%Y')
 
 DISPLAY_PAGES_ON_MENU = True
 
-TWITTER_USERNAME = 'http://github.com/felipejcruz'
+TWITTER_USERNAME = 'felipejcruz'
 GITHUB_URL = 'http://github.com/felipecruz'
 GOOGLE_ANALYTICS = 'UA-1152054-2'
 
-THEME = 'svbtle/'
+#THEME = 'svbtle/'
+THEME = 'loogica_template/'
 MEDIA_URL = './theme/'
