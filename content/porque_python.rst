@@ -2,7 +2,7 @@ O Porquê de Python - para Desenvolvedores
 =========================================
 
 :date: 2012-10-29
-:tags: python plataforma
+:tags: python,plataforma
 :category: Videos
 :author: Felipe Cruz
 :short_description: Video de introdução para desenvolvedores que querem conhecer uma outra linguagem e um outro universo e assim aumentar a sua capacidade
