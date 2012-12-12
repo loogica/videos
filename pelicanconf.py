@@ -22,7 +22,7 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 SOCIAL = (('Twitter', 'http://twitter.com/felipejcruz', 'icon-twitter'),
           ('Github', 'http://github.com/felipecruz', 'icon-github'),)
 
-DEFAULT_PAGINATION = 4
+DEFAULT_PAGINATION = 10
 
 SUMMARY_MAX_LENGTH = (10)
 
