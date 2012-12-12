@@ -4,6 +4,7 @@ Mais Python Básico - pt2
 :date: 2012-08-30 23:00
 :tags: python
 :category: Videos
+:status: draft
 :author: Felipe
 :short_description: Executando programas, arquivos fonte etc..
 

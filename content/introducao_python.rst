@@ -4,6 +4,7 @@ Introdução prática
 :date: 2012-09-01 18:30
 :tags: python 
 :category: Videos
+:status: draft
 :author: Felipe
 :short_description: Um primeiro contato com o interpretador Python.
 
