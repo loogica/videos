@@ -11,6 +11,8 @@ O Porquê de Python - para Desenvolvedores
 
 .. raw:: html
 
+    <p><strong>Ver em Fullscreen/HD</strong><p>
+
     <div class="videoContent">
     <iframe width="560" height="315" src="http://www.youtube.com/embed/mzrfPfS5Y-Q?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
