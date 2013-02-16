@@ -1,5 +1,5 @@
-Estruturas de Dados - Básico - Fundamentos
-==========================================
+Estruturas de Dados - Básico - Fundamentos - Parte 1
+====================================================
 
 :date: 2012-12-16 14:30
 :tags: python,estruturas de dados
